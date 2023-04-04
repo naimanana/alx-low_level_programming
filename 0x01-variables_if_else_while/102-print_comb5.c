@@ -1,28 +1,30 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - This is the main entry of the program
  *
- * Return: 0 Always Success
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int n, b, a, c;
+	int i;
+	int j;
 
-	for (n = 48; n <= 57; n++)
+	for (i = 0; i <= 99; i++)
 	{
-		for (b = 48; b <= 57; b++)
+		for (j = i; j <= 99; j++)
 		{
-			for (a = 48; a <= 57; a++)
+			if (j != i)
 			{
-				for (c = a + 1; c <= 57; c++)
+				putchar(i / 10 + 48);
+				putchar(i % 10 + 48);
+				putchar(' ');
+				putchar(j / 10 + 48);
+				putchar(j % 10 + 48);
+				if (i * 100 + j != 9899)
 				{
-					putchar(n);
-					putchar(b);
-					putchar(' ');
-					putchar(a);
-					putchar(c);
 					putchar(',');
 					putchar(' ');
 				}
